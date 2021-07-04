@@ -33,7 +33,7 @@ bool cycleBFS(int v, vector<int> adj[]){
         for(auto it : adj[node]){
             inDegree[it]--;
             if(inDegree[it] == 0)
-                count++;
+                q.push(it);
         }
     }
     
