@@ -1,3 +1,8 @@
+# Detect cycle in directed graph using BFS
+
+We will use the idea of the topological sort, we know that the topological sort can only be generated in the graph which is DAG, so if we are unable to generate topological sort using kahn's algo then we can say that the graph is cyclic, we are just using the reverse algorithm
+
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -60,3 +65,4 @@ int main(){
     
     return 0;
 }
+```
