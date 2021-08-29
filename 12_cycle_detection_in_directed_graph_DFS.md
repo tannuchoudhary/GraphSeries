@@ -7,7 +7,15 @@ Here we can't use the old method which we had used in undirected graph, as in un
 
 ![Screenshot from 2021-08-29 20-46-21](https://user-images.githubusercontent.com/42698268/131255983-8cb279a3-d36e-4b89-ae65-c0b38804a5b6.png)
 
-If we'll have a visited array then for the nodes 3, 4, 5, 6, it will tell us that it is a cycle because when we'll go to 3 then 4 then 5 and mark all 3 as visited, now when we'll go to 6 it will tell us that there is an adjacent node to 6 whic is already visited and that is 5, but it doesn't know that it is stil not making a cycle so along with visited array, we'll keep track of directed visited i.e, we'll take a dfsVis which will tell us that whetehr the particular node is visited for this direction or not
+If we'll have a visited array then for the nodes 3, 4, 5, 6, it will tell us that it is a cycle because when we'll go to 3 then 4 then 5 and mark all 3 as visited, now when we'll go to 6 it will tell us that there is an adjacent node to 6 whic is already visited and that is 5, but it doesn't know that it is stil not making a cycle so along with visited array, we'll keep track of directed visited i.e, we'll take a dfsVis which will tell us that whetehr the particular node is visited for this direction or not.
+
+![Screenshot from 2021-08-29 21-01-06](https://user-images.githubusercontent.com/42698268/131256106-2db59f55-3e9a-41c0-b388-0f6af419196e.png)
+
+what we will do is, we'll have two visited arrays called ```vis``` and a ```dfsVis```, whenever we will visit a node we will mark it as visited in vis as well as dfsVis, but when the dfs function will return i.e we are returning from that node because there is no further nodes to visit so we'll mark the dfsVis to be 0 again because now we are returning from that direction.
+
+# Time complexity and space complexity
+* Time complexity would be ```O(N+E)``` due to simple DFS call
+* Space complexity would be ``` O(N+E) + O(N) + O(N) + O(N)``` adjacency list, visited array, dfs visited and auxilliary space for dfs call
 
 ```cpp
 #include<bits/stdc++.h>
